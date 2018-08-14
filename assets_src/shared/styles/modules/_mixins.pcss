@@ -1,0 +1,32 @@
+@define-mixin make-font $fontFamily, $filePath, $weight: normal, $style: normal {
+  @font-face {
+    font-family: $fontFamily;
+    src: url('$filePath.eot?10235155');
+    src: url('$filePath.eot?#iefix') format('embedded-opentype'),
+    url('$filePath.woff?10235155') format('woff'),
+    url('$filePath.ttf?10235155') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@define-mixin make-icon-font $fontFamily, $filePath {
+  @font-face {
+    font-family: $fontFamily;
+    src: url('$filePath.eot?6957191');
+    src: url('$filePath.eot?6957191#iefix') format('embedded-opentype'),
+    url('$filePath.woff2?6957191') format('woff2'),
+    url('$filePath.woff?6957191') format('woff'),
+    url('$filePath.ttf?6957191') format('truetype'),
+    url('$filePath.svg?6957191#Icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@define-mixin make-background $imgName {
+  background-image: url($imgName);
+  /*background-position: center center;*/
+  background-size: cover;
+}
+

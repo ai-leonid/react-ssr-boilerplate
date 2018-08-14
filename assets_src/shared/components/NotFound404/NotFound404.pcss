@@ -1,0 +1,34 @@
+@import '../../styles/modules/_variables.pcss';
+
+.not-found-404 {
+  padding-top: 100px;
+
+  .not-found-text {
+    position: relative;
+    z-index: 20;
+    color: $colorTextLight;
+    width: 70%;
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 auto;
+    :global {
+      animation: noise 0.5s infinite;
+      box-reflect: below 5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(white));
+    }
+  }
+}
+
+@keyframes :global(spin-360) {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+@keyframes :global(noise) {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 1; transform: scaleY(1.7);}
+  43% {opacity: 1; transform: scaleX(1.5);}
+}
+

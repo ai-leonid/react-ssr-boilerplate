@@ -1,0 +1,16 @@
+.idea
+*.log
+apiConfig.js
+appConfig.js
+assets_src/node_modules/
+assets_src/bower_components/
+assets_src/*.tmp
+node_modules/
+config/common.json
+config/client.json
+config/server.json
+bower_components/
+public/
+dist/
+uls-scratch/
+

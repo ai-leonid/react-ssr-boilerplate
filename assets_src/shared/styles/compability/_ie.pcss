@@ -1,0 +1,13 @@
+/* HACK for IE9 svg scalable */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ie9 {
+    img[src$=".svg"] {
+      width: 100%;
+    }
+  }
+}
+
+/*hack for IE that hide cross inside input*/
+input::-ms-clear {
+  display: none;
+}

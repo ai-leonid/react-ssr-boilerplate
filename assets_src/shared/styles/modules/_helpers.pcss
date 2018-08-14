@@ -1,0 +1,128 @@
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+  &-inline {
+    display: inline-block !important;
+  }
+}
+
+.text-transform-off {
+  text-transform: none;
+}
+
+.anim-off {
+  &:hover {
+    transform: none;
+  }
+}
+
+.shadow-off {
+  box-shadow: none;
+}
+
+.container-float-fix {
+  clear: fix;
+}
+
+ol.lower-roman, ul.lower-roman {
+  list-style-type: lower-roman;
+}
+
+ol.upper-alpha, ul.upper-alpha {
+  list-style-type: upper-alpha;
+}
+
+ol.dashed, ul.dashed {
+  list-style-type: none;
+
+  &>li:before {
+    content: '- ';
+    counter-increment: item
+  }
+}
+
+ol {
+  counter-reset: item;
+
+  &>li {
+    display: block
+  }
+
+  &>li:before {
+    content: counters(item, '.') '. ';
+    counter-increment: item
+  }
+}
+
+/*ol.nested {
+  li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item
+  }
+}*/
+
+/*Embedding iframes default 100%
+of height if height of
+parent element is EXIST*/
+.video-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+/* 16x9 Aspect Ratio */
+.video-container-16x9 {
+  padding-top: 56.25%;
+  /* padding-bottom: 56.25%; */
+}
+
+/* 4x3 Aspect Ratio */
+.video-container-4x3 {
+  padding-top: 75%;
+}
+
+.fill-image-container {
+  height: 100%;
+
+  img {
+    width: 100% !important;
+    max-height: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/*image is resizing only width and
+all extra HEIGHT is hidden*/
+.overflow-image-container {
+  overflow: hidden;
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/*like in css background-cover
+must have fixed height of container
+for proportional viewport need polyfill*/
+.cover-image-container {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

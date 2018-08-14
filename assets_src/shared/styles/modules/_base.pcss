@@ -1,0 +1,237 @@
+@import './_fonts.pcss';
+@import './_variables.pcss';
+
+html {
+  font-size: $fontSizeHtml;
+  line-height: $fontLineHeight;
+  box-sizing: border-box;
+
+  /*@media ($forDesktop3kUp) {
+    font-size: $fontSizeHtml3kUp;
+  }*/
+
+}
+
+*, *:before, *:after {
+  /*all elements border-boxed*/
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $colorTxDarkBase;
+  background: $colorBgLightBase;
+  font-family: $fontMain;
+  font-weight: $fontWeightLight;
+  font-size: $fontSizeMain;
+  position: relative;
+  /*overflow-x: hidden;*/
+  transition: all $transitionDurationBase $transitionTimingBase;
+  opacity: 1;
+
+  &.disable-scroll {
+    overflow: hidden;
+    -ms-scroll-translation: none;
+    -ms-overflow-style: none;
+    -ms-scroll-chaining: none;
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+/*
+h1, h2, h4 {
+  font-weight: $fontWeightLight;
+}
+
+h3, h5, h6 {
+  font-weight: $fontWeightBold;
+}*/
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: inherit;
+}
+
+dl, dd, dt, i {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  margin: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  padding-left: 0.5em;
+  margin-left: 0.5em;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $linkTxColor_normal;
+  text-decoration: none;
+  border-bottom: 1px solid $linkTxColor_normal;
+  transition: $transitionDurationBase $transitionTimingBase;
+
+  &:visited {
+    color: $linkTxColor_visited;
+    border-bottom: 1px solid $linkTxColor_visited;
+  }
+
+  &:active, &:focus {
+    color: $linkTxColor_active;
+    border-bottom: 1px solid $linkTxColor_active;
+  }
+}
+
+h1, .headline-1 {
+  font-weight: $fontWeightLight;
+  text-transform: uppercase;
+  font-size: $fontSizeHeadline1;
+
+  @media ($forPhoneOnly) {
+    font-size: calc($fontSizeHeadline1 - 2.7rem);
+  }
+}
+
+h2, .headline-2 {
+  font-weight: $fontWeightLight;
+  font-size: $fontSizeHeadline2;
+  word-wrap: break-word;
+
+  @media ($forPhoneOnly) {
+    font-size: calc($fontSizeHeadline2 - 2.7rem);
+  }
+
+  @media ($forTabletOnly) {
+    font-size: calc($fontSizeHeadline2 - 2rem);
+  }
+}
+
+h3, .headline-3 {
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeHeadline3;
+
+  @media ($forPhoneOnly) {
+    font-size: calc($fontSizeHeadline3 - 1.2rem);
+  }
+}
+
+h4, .headline-4 {
+  font-weight: $fontWeightLight;
+  font-size: $fontSizeHeadline4;
+
+  @media ($forPhoneOnly) {
+    font-size: calc($fontSizeHeadline4 - 1.2rem);
+  }
+}
+
+h5, .headline-5 {
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeHeadline5;
+
+  @media ($forPhoneOnly) {
+    font-size: calc($fontSizeHeadline5 - 1.2rem);
+  }
+}
+
+h6, .headline-6 {
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeHeadline6;
+
+  @media ($forPhoneOnly) {
+    font-size: calc($fontSizeHeadline6 - 0.8rem);
+  }
+}
+
+.headline-7 {
+  font-weight: $fontWeightLight;
+  text-transform: uppercase;
+  font-size: $fontSizeHeadline7;
+
+  @media ($forPhoneOnly) {
+    font-size: calc($fontSizeHeadline7 - 0.8rem);
+  }
+}
+
+.headline-8 {
+  font-weight: $fontWeightLight;
+  text-transform: uppercase;
+  font-size: $fontSizeHeadline8;
+
+  @media ($forPhoneOnly) {
+    font-size: calc($fontSizeHeadline8 - 0.2rem);
+  }
+}
+
+.thesis-text {
+  font-weight: $fontWeightLight;
+  font-size: $fontSizeThesis;
+}
+
+.accent-text {
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeAccent;
+}
+
+.header, .footer {
+  position: relative;
+}
+
+.section {
+  display: block;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  min-width: 900px;
+  /*1216 - clean size*/
+  max-width: calc($cInnerPadding+$cBaseWidth+$cInnerPadding);
+  /*width: $containerWidth;*/
+  /*max-width: 3500px;*/
+}
+
+.container {
+  padding-left: $cInnerPadding;
+  padding-right: $cInnerPadding;
+
+  @media ($forPhonesAndTablets) {
+    padding-left: $cInnerPadding;
+    padding-right: $cInnerPadding;
+  }
+}
+
+
+
+

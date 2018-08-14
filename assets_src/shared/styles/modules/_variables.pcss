@@ -1,0 +1,321 @@
+/* service 1 - on 0 off*/
+$debugCssMode: 1;
+$debugCssLine: 1;
+$debugCssBackground: 1;
+/*----------------------------*/
+/*------------GRID, CONTAINER------------*/
+@lost gutter 0;
+$containerWidth: 95%;
+$gridColumnsCount: 12;
+$gridGutterPx: 24px;
+$gridColumnPx: 80px;
+
+$cBaseWidth: 1224px;
+/*$cInnerPadding: 20px;*/
+$cInnerPadding: 0px;
+
+/*------------FONT SETTINGS------------*/
+$fontRoboto: Roboto, Helvetica, Arial, sans-serif;
+$fontMain: $fontRoboto;
+
+$fontWeightLight: 300;
+$fontWeightNormal: 500;
+$fontWeightBold: bold;
+
+$fontSizeMain: 1.8rem;
+$fontSizeSmall: 1.6rem;
+$fontSizeSuperSmall: 1.4rem;
+$fontSizeThesis: 2.4rem;
+$fontSizeAccent: 2rem;
+
+$fontSizeHeadline1: 7.2rem;
+$fontSizeHeadline2: 7.2rem;
+$fontSizeHeadline3: 4.8rem;
+$fontSizeHeadline4: 4.8rem;
+$fontSizeHeadline5: 4rem;
+$fontSizeHeadline6: 2.8rem;
+$fontSizeHeadline7: 2.8rem;
+$fontSizeHeadline8: 1.8rem;
+
+/*10px=62,5% root font-size*/
+/* $fontSizeHtml: 62.5%; */
+$fontSizeHtml: 10px;
+$fontSizeHtml3kUp: 14px;
+$fontLineHeight: 1.4;
+
+/*------------TRANSITIONs, ANIMATIONS, VISUAL------------*/
+$transitionDurationBase: 0.5s;
+$transitionTimingBase: ease-in-out;
+$boxShadowBase: 0 6px 9px rgba(0, 28, 57, 0.2);
+
+/* ----------COLOR VARIABLES------------*/
+/*Main colors*/
+$white: #ffffff; /* absolute white */
+$black: #000000; /* absolute black */
+
+$deepBlue900: #00131d; /* header */
+$deepBlue800: #001c39;
+$deepBlue700: #00294b;
+
+$green900: #3d7147;
+$green800: #6eb32b;
+$green700: #9dd932;
+$green600: #c9e697;
+$green500: #e4f1cc;
+
+$blue1000: #05416c; /*used in gradient*/
+$blue900: #006aae;
+$blue800: #00a8ec;
+$blue700: #1cd2ff;
+$blue600: #5dddfd;
+$blue500: #aceefe;
+$blue400: #cef5fe; /*used in select-option*/
+
+$orange1000: #893503;
+$orange900: #ff540d;
+$orange800: #ff7f00;
+$orange700: #fe9202;
+$orange600: #ffd089;
+$orange500: #ffe8cd;
+
+$grey900: #6b7989;
+$grey800: #a1abb2;
+$grey700: #c3d0d8;
+$grey600: #d9e2e6;
+$grey500: #f2f4f5;
+
+$red900: #bf2f00;
+$red700: #f0bdb3;
+$red800: #ffe1d9;
+
+/* Colors third party*/
+$colorLogoFb: #3B5998;
+$colorLogoVk: #4D76A1;
+$colorLogoTwitter: #00ACED;
+$colorLogoGoogle: #DB4437;
+
+$colorLogoAmd: #0a9b68;
+$colorLogoIntel: #0160a9;
+$colorLogoNvidia: #78ba00;
+
+/*----------BACKGROUNDS, TEXTS, LINES------------*/
+/* Rules of namespacing elements (text, bg etc) colors
+$elementLightest
+$elementLighten
+$elementLight
+$elementBase
+$elementDark
+$elementDarken
+$elementDarkest */
+
+/*---Text colors---*/
+$colorTxWhiteBase: $white;
+
+$colorTxBlackBase: $black;
+
+$colorTxDeepBlueLighten: $deepBlue700;
+$colorTxDeepBlueLight: $deepBlue800;
+$colorTxDeepBlueBase: $deepBlue900;
+
+$colorTxGreenLight: $green700;
+$colorTxGreenBase: $green800;
+$colorTxGreenDark: $green900;
+
+$colorTxBlueLighten: $blue500;
+$colorTxBlueLight: $blue800;
+$colorTxBlueBase: $blue900;
+
+$colorTxOrangeBase: $orange800;
+$colorTxOrangeDark: $orange900;
+$colorTxOrangeDarken: $orange1000;
+
+$colorTxGreyLightest: $grey500;
+$colorTxGreyLighten: $grey600;
+$colorTxGreyLight: $grey700;
+$colorTxGreyBase: $grey800;
+$colorTxGreyDark: $grey900;
+
+$colorTxRedBase: $red900;
+
+/*Light and dark text themes*/
+$colorTxLightBase: $colorTxWhiteBase;
+$colorTxDarkBase: $colorTxDeepBlueBase;
+
+/*---Background colors---*/
+$colorBgWhiteBase: $white;
+
+$colorBgBlackBase: $black;
+
+$colorBgDeepBlueLighten: $deepBlue700;
+$colorBgDeepBlueLight: $deepBlue800;
+$colorBgDeepBlueBase: $deepBlue900;
+
+$colorBgGreenLight: $green500;
+$colorBgGreenBase: $green700;
+$colorBgGreenDark: $green800;
+
+$colorBgBlueLighten: $blue400;
+$colorBgBlueLight: $blue600;
+$colorBgBlueBase: $blue700;
+$colorBgBlueDark: $blue800;
+$colorBgBlueDarken: $blue1000;
+
+$colorBgOrangeLighten: $orange500;
+$colorBgOrangeLight: $orange600;
+$colorBgOrangeBase: $orange700;
+$colorBgOrangeDark: $orange800;
+$colorBgOrangeDarken: $orange900;
+
+$colorBgGreyLight: $grey500;
+$colorBgGreyBase: $grey700;
+
+$colorBgRedBase: $red800;
+
+/*Light and dark background themes*/
+$colorBgDarkBase: $colorBgDeepBlueBase;
+$colorBgLightBase: $colorBgWhiteBase;
+
+/*---Line (border, table-border) colors---*/
+$colorLineWhiteBase: $white;
+
+$colorLineGreyBase: $grey700;
+$colorLineGreyDark: $grey800;
+$colorLineGreyDarken: $grey900;
+
+$colorLineBlueLighten: $blue500;
+$colorLineBlueLight: $blue600;
+$colorLineBlueBase: $blue800;
+
+$colorLineOrangeBase: $orange600;
+
+$colorLineGreenLight: $green600;
+$colorLineGreenBase: $green800;
+
+$colorLineRedLight: $red700;
+$colorLineRedBase: $red900;
+
+/* -----------ELEMENTS-----------*/
+/*---Buttons---*/
+$btnDeepBlueBgColor_normal: $colorBgDeepBlueBase;
+$btnDeepBlueBgColor_hover: $colorBgGreenBase;
+$btnDeepBlueBgColor_pressed: $colorBgGreenDark;
+$btnDeepBlueBgColor_disabled: $colorBgGreyBase;
+
+$btnLightGreenBgColor_normal: $colorBgGreenLight;
+$btnLightGreenBgColor_hover: $colorBgGreenBase;
+$btnLightGreenBgColor_pressed: $colorBgGreenDark;
+$btnLightGreenBgColor_disabled: $colorBgGreyBase;
+
+$btnGreenBgColor_normal: $colorBgWhiteBase;
+$btnGreenBgColor_hover: $colorBgGreenBase;
+$btnGreenBgColor_pressed: $colorBgGreenDark;
+$btnGreenBgColor_disabled: $colorBgGreyBase;
+
+$btnBlueBgColor_normal: $colorBgWhiteBase;
+$btnBlueBgColor_hover: $colorBgBlueBase;
+$btnBlueBgColor_pressed: $colorBgBlueDark;
+$btnBlueBgColor_disabled: $colorBgGreyBase;
+
+$btnOrangeBgColor_normal: $colorBgOrangeDarken;
+$btnOrangeBgColor_hover: $colorBgOrangeBase;
+$btnOrangeBgColor_pressed: $colorBgOrangeDark;
+$btnOrangeBgColor_disabled: $colorBgGreyBase;
+
+$btnBgGreyColor: $colorBgGreyBase;
+
+$btnTxDeepBlueColor: $colorTxDeepBlueBase;
+$btnTxGreenColor: $colorTxGreenLight;
+$btnTxWhiteColor: $colorTxWhiteBase;
+
+$btnBrdBlueColor: $colorLineBlueBase;
+$btnBrdGreenColor: $colorTxGreenLight;
+
+/*---Links---*/
+$linkTxColor_normal: $colorTxBlueLight;
+$linkTxColor_active: $colorTxGreenBase;
+$linkTxColor_visited: $colorTxBlueBase;
+
+/* -----------MEDIA QUERIES-----------*/
+/* Media Queries group on gadgets*/
+/*Screens width size
+0-599 - phones
+600-1199 - tablets
+1200-1799 - desktop,
+1800-2199 - 2k,
+2200-3199 - 3k,
+3200+ - 4k
+*/
+$screen600: 600px; /* phones */
+$screen900: 900px; /* tablets */
+$screen1200: 1200px; /* desktops */
+$screen1366: 1366px; /* laptops */
+$screen1800: 1800px; /* 2K */
+$screen2200: 2200px; /* 3k */
+$screen3200: 3200px; /* 4K */
+$screen4200: 4200px; /* 4K hight range and upper*/
+
+/* RETINA FINDER need used for in OR condition*/
+/* Safari, Safari IOS need prefix autoprefixer do it*/
+$retinaDetector1: (min-resolution: 120dpi);
+/* IE 10, IE 11, Opera Mini */
+$retinaDetector2: (min-device-pixel-ratio: 1.25);
+
+/* -------PHONES---------- */
+/*$forPhoneUp - Phone Up it is all without media queries - FROM 0w TO infw*/
+/* ALL Phones ONLY - FROM 0w TO 599w*/
+$forPhoneOnly: (max-width: calc($screen600 - 1px));
+/*ALL Phones ONLY Portair orientation - FROM 0w TO 599w + Portair*/
+$forPhonePortairOnly: (max-width: calc($screen600 - 1px)) and (orientation:portrait);
+/*ALL Phones ONLY Landscape orientation - FROM 0h TO 500h + Landscape*/
+$forPhoneLandscapeOnly: (max-width: calc($screen600 - 1px)) and (max-height: calc($screen600 - 100px)) and (orientation:landscape);
+/* $forPhoneLandscapeOnly: (max-width: 599px) and (orientation:landscape); */
+
+/* -----TABLETS--------- */
+/* ALL Tablets ONLY Portair orientation AND OTHER Up larger devices size - FROM 600w TO infw*/
+$forTabletPortraitUp: (min-width: $screen600); /* it is = forTabletUp */
+/* ALL tablet ONLY Portair orientation - FROM 600w TO 899w*/
+$forTabletPortaitOnly: (min-width: $screen600) and (max-width: calc($screen900 - 1px));
+/* ALL Tablets ONLY Landscape orientation AND OTHER Up larger devices size - FROM 900w TO infw*/
+$forTabletLandscapeUp: (min-width: $screen900);
+/* ALL Tablets ONLY Landscape orientation - FROM 900w TO 1199w*/
+$forTabletLandscapeOnly: (min-width: $screen900) and (max-width: calc($screen1200 - 1px));
+/* ALL Tablets ONLY - FROM 600w TO 1199w*/
+$forTabletOnly: (min-width: $screen600) and (max-width: calc($screen1200 - 1px));
+
+/* -------TABLETS+PHONES COMBINES---------- */
+/*ALL Phones AND ALL Tablets ONLY Portair orientation - FROM 0w TO 899w*/
+$forPhonesAndTabletsPortair: (max-width: calc($screen900 - 1px));
+/* ALL Phones AND ALL tablets (include landscape orientation) - FROM 0w TO 1199w*/
+$forPhonesAndTablets: (max-width: calc($screen1200 - 1px));
+
+/* -------DESKTOP---------- */
+/*ALL Desktops AND OTHER Up larger devices size - FROM 1200w TO infw*/
+$forDesktopUp: (min-width: $screen1200);
+/* ALL Desktops ONLY - FROM 1200w TO 1799w*/
+$forDesktopOnly: (min-width: $screen1200) and (max-width: calc($screen1800 - 1px));
+/*ALL Laptops AND OTHER Up larger devices size - FROM 1366w TO infw*/
+$forLaptopUp: (min-width: $screen1366);
+/* ALL Laptops ONLY - FROM 1366w TO 1799w*/
+$forLaptopOnly: (min-width: $screen1366) and (max-width: calc($screen1800 - 1px));
+/* ALL Desktops-2K AND OTHER Up larger devices size - FROM 1800w TO infw */
+$forDesktop2kUp: (min-width: $screen1800);
+/* ALL Desktops-2K ONLY - FROM 1800w TO 2199w*/
+$forDesktop2kOnly: (min-width: $screen1800) and (max-width: calc($screen2200 - 1px));
+/* ALL Desktops-3K AND OTHER Up larger devices size - FROM 2200w TO infw */
+$forDesktop3kUp: (min-width: $screen2200);
+/* ALL Desktops-3K ONLY - FROM 2200w TO 3199w*/
+$forDesktop3kOnly: (min-width: $screen2200) and (max-width: calc($screen3200 - 1px));
+/* ALL Desktops-4K AND OTHER Up larger devices size - FROM 3200w TO infw */
+$forDesktop4kUp: (min-width: $screen3200);
+/* ALL Desktops-4K ONLY - FROM 3200w TO 4199w*/
+$forDesktop4kOnly: (min-width: $screen3200) and (max-width: calc($screen4200 - 1px));
+
+/* 4K Upper larger devices size - FROM 3200w TO infw */
+$forDesktop4kUpper: (min-width: $screen4200);
+
+/* -------DESKTOP COMBINES---------- */
+/* ALL Desktops AND ALL Desktops-2K - FROM 1200w TO 2199w*/
+$forDesktopsAndDesktops2k: (min-width: $screen1200) and (max-width: calc($screen2200 - 1px));
+/* ALL Desktops-3k AND ALL Desktops-4K - FROM 2200w TO 4199w*/
+$foDesktops3kAndDesktops4k: (min-width: $screen2200) and (max-width: calc($screen4200 - 1px));
+

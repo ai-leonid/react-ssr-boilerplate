@@ -1,0 +1,40 @@
+@import '../modules/_variables.pcss';
+
+@if $debugCssMode >= 2 {
+  @if $debugCssBackground >= 1 {
+    body {
+      lost-utility: edit;
+    }
+  }
+  @if $debugCssLine >= 2 {
+    img {
+      outline: 1px solid yellow;
+    }
+    .section {
+      outline: 1px solid red;
+    }
+    .header, .footer {
+      outline: 1px solid blue;
+    }
+    .nav {
+      outline: 1px solid #808000;
+    }
+    .button-orange {
+      outline: 1px solid yellow;
+    }
+    .content {
+      outline: 1px solid black;
+    }
+    .container {
+      outline: 1px solid #800000;
+    }
+    .headline-l1, .headline-l2, .content-text-l1, .content-text-l2 {
+      outline: 1px dashed brown;
+    }
+    /* .section div, .header div, .footer div{
+          outline: 1px dashed rgba(0,255,0, 0.8)
+      } */
+  }
+}
+
+
