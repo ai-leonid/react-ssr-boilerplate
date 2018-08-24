@@ -13,7 +13,7 @@ class HelloWorld extends Component {
   render() {
     return (
         <section className="container section hello-world">
-            <h2 className="headline-2">First app hello</h2>
+            <h2 className="headline-2">Hello Component</h2>
             <h2>{this.props.someInitialData.title}</h2>
         </section>
     );

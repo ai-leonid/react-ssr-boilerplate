@@ -24,6 +24,7 @@ const serverConfig = {
   mode: appCfg.env,
   target: 'node',
   name: 'server',
+  watch: isHot,
   devtool: isDevelopment ? 'eval' : false,
   bail: !isDevelopment,
   externals: [ nodeExternals({ whitelist: [ 'webpack/hot/poll?1000' ] }) ],
